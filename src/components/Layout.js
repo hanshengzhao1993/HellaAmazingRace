@@ -23,13 +23,20 @@ export default class Layout extends React.Component {
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
                         <li>
-                            <a href="home">Home</a>
+                            {/*<a href="home">Home</a>*/}
+                            <Link to='/Home'> Home </Link>
                         </li>
                         <li>
-                            <a href="CreateRace">Create Race</a>
+                            {/*<a href="CreateRace">Create Race</a>*/}
+                            <Link to='/CreateRace'> Create Race </Link>
                         </li>
                         <li>
-                            <a href="RunRace">Run Race</a>
+                            {/*<a href="RunRace">Run Races</a>*/}
+                            <Link to='/RunRace'> Run Race </Link>
+                        </li>
+                        <li>
+                            {/*<a href="TestMap"> Test Map </a> */}
+                            <Link to="/TestMap"> Test Map </Link>
                         </li>
                     </ul>
                 </div>

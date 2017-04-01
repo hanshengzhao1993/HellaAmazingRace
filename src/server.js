@@ -19,6 +19,13 @@ import util from './config/utility';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
+/* Need this for material UI */
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
 // import gcloud from 'google-cloud';
 import gCred from './config/gcloud/cred';
 import fileUpload from 'express-fileupload';
@@ -43,8 +50,8 @@ if (process.env.NODE_ENV === 'production') {
 } else {  // local development facebook auth info (test app)
   console.log('>>in development environment');
   passport.use(new Strategy({
-    clientID: '1688391161459186',
-    clientSecret: '5246f436cebd0d4b62ef8ec2791c5ed0',
+    clientID: '1016193961847191',
+    clientSecret: '3b7240f21274cefcdc425d318a55e43d',
     callbackURL: 'http://localhost:3000/auth/facebook/callback',
     profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(small)']
   },
@@ -90,8 +97,7 @@ app.use(passport.session());
 
 
 // passport routes
-app.get('/auth/facebook',
-  passport.authenticate('facebook'));
+app.get('/auth/facebook', passport.authenticate('facebook'));
 
 app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/' }),

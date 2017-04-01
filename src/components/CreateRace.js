@@ -74,9 +74,7 @@ export default class CreateRace extends React.Component {
       <div>
 
         <h1 className="text-center"> Create a Race</h1>
-
           <RaceMap />
-
         <Autocomplete
           getDataOnSearch={this.getDataOnSearch.bind(this)} 
         />

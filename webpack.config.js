@@ -6,11 +6,12 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  devtool: debug ? 'inline-sourcemap' : null,
+  // devtool: debug ? 'inline-sourcemap' : null,
+  devtool: 'source-map',
   entry: path.join(__dirname, 'src', 'app-client.js'),
   devServer: {
     inline: true,
-    port: 3333,
+    port: 3000,
     contentBase: 'src/static/',
     historyApiFallback: {
       index: '/index-static.html'

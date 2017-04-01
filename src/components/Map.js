@@ -39,6 +39,8 @@ export default class RaceMap extends React.Component {
     this.getCurrentLocation((ready) => {
       if (ready) {
         // one time map render on page ready
+        console.log('about to render the map');
+        
         this.renderMap();
       }
     });

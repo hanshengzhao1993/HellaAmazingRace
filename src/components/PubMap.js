@@ -293,11 +293,6 @@ export default class PubMap extends React.Component {
       </div>
     );
   }
+
 }
 
-
-// Things we can do
-
-// multiple users in multiple races
-// more than 2 users 
-// saving races in db and displaying races Han?

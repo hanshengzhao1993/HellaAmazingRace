@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Revalia');
+
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
+  height: 100%;
+  width: 100%;
   /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
@@ -21,6 +31,11 @@ body {
   }
 }
 
+#main {
+  /*background-color: blue;*/
+  width: 100%;
+  height: 100%;
+}
 
 /*Geosuggest autocomplete styling*/
 
@@ -102,18 +117,215 @@ body {
 
 /* Google Maps Styling */
 
+
 #map {
-  width: 800px;
-  height: 400px;
+  width: 900px;
+  height: 900px;
+  /*
+  Use to render google maps for mobile 
+  width: 100%;
+  height: 100%;  
+  */
   margin-left: auto;
   margin-right: auto;
   background-color: grey;
 }
 
 
+
+
 /* Font styling for Timer Component */
 
-#timer {
-  font-size: 1.45em;
-  font-weight: 100;
+
+.raceMapContainer {
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  z-index: 98;
 }
+
+#runRaceNavBar {
+  /*background-color: orange;*/
+  height: 70px;
+  width: 100%;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#timer {
+  flex: 2;
+  font-size: 2.2em;
+  font-weight: 1000;  
+  /*font-family: 'Font Name', serif; */
+  /*font-family: 'Revalia', cursive;*/
+  font-family: 'Francois One', sans-serif;
+
+
+  /*background-color: yellow;  */
+}
+
+#users {
+  flex: 1;
+  position: absolute;
+  left: 0;
+  margin-left: 10px;  
+}
+
+
+#runRaceFooterBar {
+  position: absolute;  
+  left: 0px;
+  bottom: 0px;
+  background-color: orange;
+  height: 50px;
+  width: 100%;
+}
+
+
+
+
+
+/*
+Styling for RouteInfo
+*/
+
+#RouteInfoContainer {
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(#232526 , #414345);;*/
+  /*background: linear-gradient(to left, #757F9A , #D7DDE8);*/
+  background: linear-gradient(#FF5F6D , #FFC371);
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  overflow-y:scroll;
+
+}
+
+#RouteInfoBlock {
+  width: 80%;
+  height: 70px;
+  background-color: white;
+  border: 10px; 
+  border: 1px gray;
+  margin: 20px;
+}
+
+
+/*
+Styling for checkpoint
+*/
+
+#checkPointContainer {
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(#232526 , #414345);;*/
+  /*background: linear-gradient(to left, #757F9A , #D7DDE8);*/
+
+  background: linear-gradient(#FF5F6D , #FFC371);
+  display: flex;  
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+/*
+Non flex box implementation
+.camera-iconBox {
+  
+  height: 20%;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.camera-iconBox img {
+  height: 200px;
+  width: 200px;
+}
+
+#checkPointTask {
+  margin: 0 auto;
+  text-align: center;
+}
+*/
+
+
+/*
+Flex box implementation
+*/
+.camera-iconBox {
+  
+  height: 20%;
+  width: 20%;
+  margin-bottom: 10%;
+  margin-left: -4%;
+}
+
+.camera-iconBox img {
+  height: 200px;
+  width: 200px;
+}
+
+#checkPointTask {
+}
+
+
+#space {
+  background-color: yellow;
+  flex: 1;
+}
+
+#fileUploader {
+  /*display: none;*/
+}
+
+
+/*
+writing media queries specific to the iphone
+*/
+@media only screen and (max-device-width: 568px) {
+  .gmnoprint {
+    display: none;
+  }
+
+  #users {
+    margin-top: 15px;
+  }
+
+  #timer {
+    margin-left: 30px; 
+  }
+
+
+  /*
+  Non Flex Box Implementation 
+  #checkPointTask { 
+    text-align: center;
+  }
+  .camera-iconBox img{   
+    height: 100px;
+    width: 100px;    
+  }
+  
+  */
+  .camera-iconBox img {
+    height: 100px;
+    width: 100px;    
+  }
+
+  .camera-iconBox {
+
+  }
+
+}
+
+
